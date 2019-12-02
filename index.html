@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>Raportti - Eetu Niskanen</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Eetu Niskanen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap tyylimäärittelyt -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Omat tyylimäärittelyt -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Googlen fontit -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <!-- JQuery Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+    <body>
+
+    <!-- Ensimmmäinen osio -->
+    <div class="container-fluid bg-1">
+        <h2 class="margin">Harjoitustyöraportti</h2>
+        <h2>Johdanto</h2>
+        <p>Tässä raportissa käydään läpi web-palvelinohjelmointi-kurssin (TTMS0900) harjoitustyön toteutusta. Tehtävänä oli tuottaa oma palvelinpuolen web-sovellus käyttäen PHP-ohjelmointikieltä. Valitsin aiheeni itse ja päätin toteuttaa eräänlaisen portaalin esimerkiksi aloittavan yrittäjän apuvälineeksi. Ennenkuin aloitin projektin työstämisen, esitin ja hyväksytin aiheeni opettajalle. Edellä esitetään alustava harjoitustyösuunnitelma.</p>
+        
+        <h3>Harjoitustyösuunnitelma</h3>
+        <p><strong>Harjoitustyön tekijä:</strong> Eetu Niskanen M3208</p>
+        <p><strong>Aihe:</strong> Aloittavan yrittäjän portaali</p>
+        <p><strong>Keskeiset toiminnot</strong> Oma henkilökohtainen kalenteri, laskujen laatiminen, tehtävälista</p>
+        <p><strong>Käyttöliittymä:</strong> Javascriptia ja Bootstrapia hyödyntäen</p>
+        <p><strong>Tietovarastot:</strong> Laravelia ja MySQL:lää käyttäen</p>
+        <p><strong>Erityisominaisuudet</strong> FullCalendar-kirjasto</p>
+        <p><strong>Ajankäyttö:</strong> Aikaa harjoitustyön tekemiseen käytetään vähintään 40 tuntia. Työn palautus viimeistään 30.11.2018</p>
+        <hr>
+        
+        <h2>Tehtävän toteutus</h2>
+        <p>Aiheen hyväksynnän jälkeen aloitin sovelluksen työstämisen. Jo suunnitteluvaiheessa päätin toteuttaa sovelluksen Laravelia käyttäen, koska se tuntui jo kurssitehtävien aikana mukavan kivuttomalta tavalta tuottaa toimivia sovelluksia. Tein harjoitustyötä pääsääntöisesti kotona, joten asensin koneeseeni XAMPP-ohjelman, joka koostuu muun muassa Apache web-palvelimesta, MySQL-tietokannasta ja PHP:sta. XAMPPin avulla sain kaikki tarvittavat työvälineet tehtävän toteuttamiseen.</p>
+        
+        <p>Aloitin työn luomalla laravel-projektin kurssien oppien mukaisesti. Kurssin aikana Laravelin kanssa työskennellessä käytimme virtuaalikoneita, mutta itse en kotona tarvinnut virtuaalikonetta. Laravelin asennus erosi siis hieman kurssilla esitetetyistä ohjeista. Kun laravel-projekti oli luotu, rupesin tuottamaan raakaa versiota sivujen ja itse sovelluksen käyttöliittymästä. Aloitin mielestäni vaikeimmasta ja tärkeimmästä keskeisestä toiminnosta, laskujen laatimisesta. Muodostin sivun, jossa kysytään asiakkaan tietoja laskun muodostamista varten. Loin MySQL:lää käyttäen tarvittavan tietokannan laskujen tietojen tallentamista varten. Toimivan tietokannan luomisen jälkeen aloin työstää näkymiä laskujen listausta ja yksittäisen laskun tarkastelua varten. Halusin, että laskuista pystyisi muodostamaan PDF-tiedoston joko tarkastelua tai tallentamista varten. PDF-toimintoa varten jouduin asentamaan PDF-kirjaston nimeltään DOMPDF Wrapper.</p>
+        
+        <p>Laskujen luomisen ja listaamisen jälkeen halusin implementoida sovellukseeni oman henkilökohtaisen kalenterin, johon pystyisi tallentamaan omia tapahtumia. Asiaan perehdyttyäni päätin käyttää avoimen lähdekoodin FullCalendar-kirjastoa, joka on valmis Javascriptia käyttävä tapahtumakalenteri. FullCalendar ei ole täydellinen ratkaisu omien tapahtumien tallentamiseen ja sisällön hallintaan, mutta tarpeeksi toimiva ratkaisu omaan sovellukseeni. Kalenteria varten jouduin luomaan toisen tietokannan tapahtumien tallentamista varten. Kalenteri luodessa päätin tehdä kalenterinäkymästä sovelluksen etusivun, jolloin sovelluksen avatessa näkisi esimerkiksi oman päivänsä aikataulun.</p>
+        
+        <p>Alustavan suunnitelman mukaan olisin sisällyttänyt sovellukseen tehtävälistan, mutta toiminnallisuudet laskuja ja kalenteria varten veivät niin paljon aikaa, että jouduin jättämään sen pois lopullisesta työstä. Työn loppuaika kului käyttöliittymän ulkonäön viimeistelyyn ja viimeisiin muotoseikkoihin. Viimeisenä tehtävänä oli enää työn dokumentointi.</p>
+        <hr>
+        
+        <h3>Tiedostojen ja tietokantojen suhteet</h3>
+        <p>Tiedostojen ja tietokantojen suhteet toisiinsa ovat kuvattuna seuraavan kaavion mukaisesti.</p><br>
+        <img src="uml.png" alt="kaavio">
+        <br><br>
+        <p>Videoesittelyssä piti näyttää että tiedot tosiaan olivat tietokannassa mutta se unohtui kuvata, joten tässä pari kuvakaappausta XAMPPin phpMyAdmin käyttöliittymästä josta voi tarkastella luotuja tietokantoja ja tauluja.</p>
+        
+        <img src="eventscap.jpg" alt="tapahtumatietokanta" width="960px">
+        <br><br>
+        <img src="invoicescap.jpg" alt="laskutietokanta" width="960px">
+        
+        <hr>
+        
+        <h2>Yhteenveto</h2>
+        <p>Työ oli mielestäni erittäin mieluinen ja sopivan haasteellinen. Kurssin aikana opittujen asioiden ansiosta työn tekeminen Laravelia käyttäen sujui ongelmitta, mutta uusien kirjastojen ja pakettien käyttäminen työn aikana toi tehtävään mukavasti haasteita. Lopullinen sovellus on alustavan suunnitelman mukainen ja olen työhön tyytyväinen, mutta sovelluksessa on muutama asia, jotka olisin voinut toteuttaa paremminkin.</p>
+        
+        <h3>Ajan käyttö</h3>
+        <p>Aikaa työn tekemiseen oli varattu 40 tuntia, mutta itselläni työhön kului arviolta reilu 50 tuntia. Tein harjoitustyön yksin.</p>
+        
+        <h3>Itsearviointi</h3>
+        <p>Olen valmiiseen sovellukseen tyytyväinen. Työ voisi toki olla paljon parempikin, mutta ottaen huomioon, että tein työn täysin yksin, työhön jääkin helposti hieman paranneltavaa. Hieman harmittaa, että sain esimerkiksi laskujen listauksen muunnettua PDF-tiedostoksi, mutta sitten yksittäisen laskun muuntamisen PDF:ksi en saanut jostain syystä toimimaan. Kalenteriin pystyi lisäämään tapahtumia, mutta työstä puuttuu mahdollisuus poistaa tapahtuma kalenterista. Poistotoiminnon oli tarkoitus tulla valmiiseen sovellukseen, mutta en valitettavasti kerennyt implementoida toimintoa ajan puutteen vuoksi. Näistä syistä arvioisin itse arvosanaksi 3. </p>
+        
+    </div>
+
+    <!-- Toinen osio -->
+    <div class="container-fluid bg-2 text-center">
+        <h2>Työn videoesittely</h2>
+        
+    </div>
+
+    <!-- Kolmas osio -->
+    <div class="container-fluid bg-3 text-center">    
+        
+        
+        
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p class="owner">Eetu Niskanen / M3208(at)student.jamk.fi </p>
+    </footer>
+
+    </body>
+</html>
