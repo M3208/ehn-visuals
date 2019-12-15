@@ -1,4 +1,4 @@
-## Tämä on Web-visualisointi (TTMS0400) kurssin harjoitystyön esittely
+## Web-visualisointi (TTMS0400) -kurssin harjoitystyö
 
 Tästä repositoriosta löytyy harjoitustyön lähdekoodi sekä harjoitustyöraportti.
 
