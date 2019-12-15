@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>Raportti - Eetu Niskanen</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Eetu Niskanen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap tyylimäärittelyt -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Omat tyylimäärittelyt -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Googlen fontit -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <!-- JQuery Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+    <body>
+
+    <!-- Ensimmmäinen osio -->
+    <div class="container-fluid bg-1">
+        <h2 class="margin">Harjoitustyöraportti</h2>
+        <h2>Johdanto</h2>
+        <p>Tässä raportissa käydään läpi web-visualisointi -kurssin (TTMS0400) harjoitustyön toteutusta. Tehtävänä oli toteuttaa kurssin oppien mukaisesti vapaavalintainen verkkosivusto ja julkaista se GitHub Pages -toiminnon avulla valmiiksi verkkosivustoksi. Suunnittelin ja toteutin oman, valokuvauspalveluitani esittelevän yrityssivuston. Edellä esitetään harjoitustyösuunnitelma.</p>
+        
+        <h3>Harjoitustyösuunnitelma</h3>
+        <p><strong>Harjoitustyön tekijä:</strong> Eetu Niskanen M3208</p>
+        <p><strong>Aihe:</strong> Asuntovalokuvauspalveluita esittelevä yrityssivusto</p>
+        <p><strong>Toteutus</strong> Kehitystyö tehdään itsenäisesti alusta loppuun ja valmis sivusto julkaistaan kerralla GitHubissa Pages-toiminnolla.</p>
+        <p><strong>Ajankäyttö:</strong> Opintojakson kuvauksen mukaan harjoitustyön tekemiseen on varattu aikaa 34 tuntia. Työn palautuspäivämääräksi on määritelty 15.12.2019.</p>
+        <hr>
+        
+        <h2>Tehtävän yleiskuvaus</h2>
+        <p>Toteutettavat nettisivut ovat suunnattu pääasiallisesti kiinteistönvälittäjille, asuntomyyjille ja kaikille jotka tarvitsevat asuntokuvaukseen liittyviä palveluita. Alkuperäinen ajatus oli, että sivustosta tehdään niin toimiva, että sen voin jopa oikeasti julkaista sellaisenaan minimaalisin muutoksin.</p>
+        
+        <h2>Tehtävän toteutus</h2>
+        <p>Aloitin työni suunnittelemalla sivustolle yksinkertaisen rakennemallin. Mietin, että miten yrityspalveluita halutaan netissä esitellä ja loin sen pohjalta idean, miten ja kuinka monta perussivua sivustolle tulisi. Halusin sivustolleni vähintään 4 sivua, jotka oleellisesti kertoisi palveluistani, ja päätin, että sivustolla tulee olemaan ainakin palvelut-, galleria-, hinnasto- ja yhteystiedot-sivu.</p>
+        
+        <p>Kun olin saanut yleiskuvan sivustosta, aloitin luomalla projektiin tarvittavat tiedostot. Muodostin ensin sivuston etusivun, joka yksinkertaisuudessaan näyttäisi yrityksen nimen, ja kertoisi vierailijalle, mitä palveluja sivulla esitellään. Tälle etusivulle en määrittänyt muuta kuin taustakuvan cover-tyylisesti ja headerin otsikoineen. Lisäsin sivulle myös Bootstrap-kirjastoa hyväksikäyttäen navigaatio-menun, jonka ulkonäköä muokkasin hieman ja lisäsin pienen animaation. Tämä menu säilyy myös sivuston muilla sivuilla. Kun olin muodostanut etusivun, lisäsin palvelut-, galleria-, hinnasto- ja Ota Yhteyttä -sivut. Palvelut-sivun muodostamisessa ei käytetty mitään erikoisia tekniikoita, mutta Galleria-sivulle lisäsin javascriptiä hyödyntäen pienen ja yksinkertaisen galleria-sovelluksen, jolla pystyy näppärästi katsomaan lisättyjä valokuvia. Galleria-sivulle olisi voitu lisätä muitakin galleria-yksiköitä, mutta koska tämä on harjoitustyö, en lisännyt sinne enempää kuvia monimutkaistamaan asioita. Hinnasto sivulla hyödynnetään Bootstrapin row- ja column-määrittelyjä. Näitäkin tietenkin ollaan hieman muokattu sivuston mukaisesti säilyttäen responsiivisuuden ja skaalautuvuuden. Viimeisellä sivulla tarkoituksena on hieman kertoa itsestäni ja esittää yhteystiedot. Työn loppuvaiheilla lisäsin kaikille muille sivuille paitsi etusivulle footer-osion, johon liitin esimerkiksi sosiaalisen median tietoni.</p>
+        
+        <p>Sivuston HTML-koodin tuottamisessa ei ollut loppujen lopuksi mitään ihmeellistä eikä vaikeuksia, mutta puolestaan suurin osa ajasta meni CSS-tyylien määrittelyihin ja skaalautuvuuden optimoimiseen. Käytin hyväkseni CSS-esiprosessoria ja SCSS-syntaksia. SCSS:n kääntämiseen käytin Koala-sovellusta. Yksittäisistä asioista eniten aikaa kului muun muassa galleria-sovellukseen, skaalautuuden optimointiin ja tiettyihin tyylimäärittelyihin kuten esimerkiksi footer-osion määrittämiseen niin, että se pysyy sivuston alalaidassa riippumatta sivuston ikkunan koosta.</p>
+        <hr>
+        
+        <h2>Yhteenveto</h2>
+        <p>Harjoitustyö kattoi hyvin kurssin aihealueen asioita ja oli mielenkiintoinen toteuttaa. Vaikka minulla oli jo jonkinverran kokemusta nettisivujen tekemisestä aiemmista opinnoistani, opin silti hieman lisää muun muassa tyylimäärittelyistä ja SASS:sta. En ollut myöskään aiemmin perehtynyt GitHubin Pages-toimintoon, joten se oli minulle uutta.</p>
+        <h3>Ajan käyttö</h3>
+        <p>Aikaa työn tekemiseen oli varattu noin 34 tuntia, ja itselläni työn tekemiseen ja dokumentointiin kului arviolta noin 37 tuntia. Tein harjoitustyötä viikkojen 48 ja 50 välillä 2-3 tuntia aina työpäiväni jälkeen sekä hieman myös viikonloppuisin.</p>
+        
+        <h3>Itsearviointi</h3>
+        <p>Toteuttamani sivusto kattaa aika paljolti kurssin aikana käydyistä tekniikoista ja sivustosta tuli yksinkertainen, moderni ja toimiva kokonaisuus, ja se esittelee nykyajan vaatimusten mukaisesti palveluita tarjoavan yrityksen tiedot ja palvelut. Hyväksikäytettyjä kirjastoja on muokattu omalle sivustolle sopivimmiksi ja sivusto on hyvin responsiivinen ja skaalautuu ongelmitta eri selaimilla sekä mobiililla. Tämän lisäksi heitin mukaan myös hieman Javascriptia, vaikka sitä ei oltu millään tavalla vaadittu. Sivuston yleisilme on miellyttävän eikä ollenkaan silmälle häiritsevä. Muun muassa näiden asioiden takia arvioisin kokonaisuuden arvosanalla 3 tai 4.</p>
+        
+    </div>
+
+    <!-- Toinen osio -->
+    <div class="container-fluid bg-2 text-center">
+        <h2>Lähdekoodi</h2>
+        
+        <p>Kaikki harjoitustyön tiedostot ja dokumentaatio tarkasteltavana Githubissa: <a href="https://github.com/M3208/ehn-visuals">täältä</a></p>
+        <p>tai JAMKin student palvelimelta: <a href="https://student.labranet.jamk.fi/~M3208/webvisualisointi/h11%20-%20harjoitustyo/">täältä</a></p>
+        
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p class="owner">Eetu Niskanen / M3208(at)student.jamk.fi </p>
+    </footer>
+
+    </body>
+</html>
